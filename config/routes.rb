@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'listings#index'
 
   resources :listings do
-    resources :orders
+    resources :orders, only: [:new, :create]
   end
 
   
@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   get 'pages/contact'
 
   get 'seller' => "listings#seller"
+
+  get 'sales' => "orders#sales"
+  get 'purchases' => "orders#purchases"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

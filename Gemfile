@@ -29,6 +29,8 @@ gem 'bootstrap-sass'
 #paperclip for image uplaod
 gem 'paperclip'
 
+gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
